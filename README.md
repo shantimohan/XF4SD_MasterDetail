@@ -20,7 +20,7 @@ Whether the *Toolbar* **StackLayout** in the ***Details.xaml*** is displayed or 
 bool IsSpanned => DualScreenInfo.Current.SpanMode != TwoPaneViewMode.SinglePane;
 ```
 
-But it is found that this setting is ***not stable***. *Sometimes* when in *Dual Screen Mode*, when an item in the left pane is selected the *Details* goes into *Single Screen Mode* and the *Toolbar* **StackLayout** disappears. Since **ToolbarItems** are not shown at all it seems ***Details.xaml*** is still displayed rather than ***DetailsPage.xaml***. This doesn't happen all times.
+But it is found that this setting is ***not stable***. *Sometimes* when in *Dual Screen Mode*, when an item in the left pane is selected the *Details* goes into *Single Screen Mode* and the *Toolbar* **StackLayout** disappears. This doesn't happen all times.
 
 ## Next Steps:
 Since this SDK is in preview and under active development, I don't know if there is a plan to include individual **ToolbarItems** to the two *Panes*. Till then I suppose the method used in the project is the solution.
