@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:dualScr="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen"
+             xmlns:views="clr-namespace:XF4SD_MasterDetail.Views"
+             mc:Ignorable="d"
+             x:Class="XF4SD_MasterDetail.Views.MasterDetail">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     IconImageSource="icon_plus"
+                     Order="Primary" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <dualScr:TwoPaneView MinTallModeHeight="4000"
+                             MinWideModeWidth="4000">
+            <dualScr:TwoPaneView.Pane1>
+                <views:Master x:Name="masterPage"
+                              SelectionChanged="OnTitleSelected" />
+            </dualScr:TwoPaneView.Pane1>
+
+            <dualScr:TwoPaneView.Pane2>
+                <views:Details x:Name="detailsPage" />
+            </dualScr:TwoPaneView.Pane2>
+        </dualScr:TwoPaneView>
+    </ContentPage.Content>
+</ContentPage>
